@@ -12,6 +12,13 @@
             <block class="Tudai\CuentaCorriente\Block\MyAccount"
                    name="tudai-customer-credit-status"
                    after="tudai-custom-text" />
+
+            <block class="Tudai\CuentaCorriente\Block\MyAccountTemplate"
+                   name="tudai-customer-credit-status-template"
+                   after="tudai-customer-credit-status"
+                   template="Tudai_CuentaCorriente::customer/dashboard/user_credit_status.phtml"
+            />
+
         </referenceContainer>
     </body>
 </page>
