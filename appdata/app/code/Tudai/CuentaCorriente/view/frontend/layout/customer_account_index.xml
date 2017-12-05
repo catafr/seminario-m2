@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Text" name="tudai-custom-text" as="tudai-custom-text" before="-">
+                <arguments>
+                    <argument name="text" xsi:type="string"><![CDATA[TUDAI <br />]]></argument>
+                </arguments>
+            </block>
+
+            <block class="Tudai\CuentaCorriente\Block\MyAccount"
+                   name="tudai-customer-credit-status"
+                   after="tudai-custom-text" />
+
+            <block class="Tudai\CuentaCorriente\Block\MyAccountTemplate"
+                   name="tudai-customer-credit-status-template"
+                   after="tudai-customer-credit-status"
+                   template="Tudai_CuentaCorriente::customer/dashboard/user_credit_status.phtml"
+            />
+
+        </referenceContainer>
+    </body>
+</page>

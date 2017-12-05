@@ -1,0 +1,9 @@
+<?php
+/**
+ * @var $block \Tudai\CuentaCorriente\Block\MyAccountTemplate
+ */
+?><?php if ($block->isUserCreditAvailable()): ?>
+    <p style="color: #2ca02c;font-weight: bold;margin: 20px;">El usuario puede comprar con Cuenta Corriente</p>
+<?php else: ?>
+    <p style="color: #942a25;font-weight: bold;margin: 20px;">El usuario no puede comprar con Cuenta Corriente</p>
+<?php endif; ?>
